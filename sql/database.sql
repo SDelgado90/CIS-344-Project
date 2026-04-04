@@ -1,8 +1,8 @@
--- 1. Create the Database
+--Create the Database
 CREATE DATABASE IF NOT EXISTS childcare_db;
 USE childcare_db;
 
--- 2. Classrooms Table (Includes Age Ranges and Capacity Constraints)
+--Classrooms Table (Includes Age Ranges and Capacity)
 CREATE TABLE classrooms (
     id INT AUTO_INCREMENT PRIMARY KEY,
     room_name VARCHAR(50) NOT NULL,
@@ -10,7 +10,7 @@ CREATE TABLE classrooms (
     capacity INT NOT NULL
 );
 
--- 3. Guardians Table (Secure Personal Data Management)
+--Guardians Table (Secure Personal Data Management)
 CREATE TABLE guardians (
     id INT AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(50) NOT NULL,
@@ -20,7 +20,7 @@ CREATE TABLE guardians (
     current_balance DECIMAL(10, 2) DEFAULT 0.00
 );
 
--- 4. Children Table (Linked to Classrooms via Foreign Key)
+--Children Table (Linked to Classrooms via Foreign Key)
 CREATE TABLE children (
     id INT AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(50) NOT NULL,
@@ -30,8 +30,8 @@ CREATE TABLE children (
     FOREIGN KEY (classroom_id) REFERENCES classrooms(id) ON DELETE SET NULL
 );
 
--- 5. Enrollment Bridge Table (Linking Children to Guardians)
--- This allows for "Joins" to show which parent belongs to which child
+--Enrollment Bridge Table (Linking Children to Guardians)
+-- Allows for "Joins" to show which parent belongs to which child
 CREATE TABLE enrollment (
     child_id INT,
     guardian_id INT,
@@ -40,7 +40,7 @@ CREATE TABLE enrollment (
     FOREIGN KEY (guardian_id) REFERENCES guardians(id) ON DELETE CASCADE
 );
 
--- 6. Attendance Table (For Transactions and Tracking)
+--Attendance Table (For Transactions and Tracking)
 CREATE TABLE attendance (
     id INT AUTO_INCREMENT PRIMARY KEY,
     child_id INT,
@@ -49,7 +49,7 @@ CREATE TABLE attendance (
     FOREIGN KEY (child_id) REFERENCES children(id) ON DELETE CASCADE
 );
 
--- 7. Invoices Table (For Billing Transactions)
+--Invoices Table (For Billing Transactions)
 CREATE TABLE invoices (
     id INT AUTO_INCREMENT PRIMARY KEY,
     guardian_id INT,
@@ -59,7 +59,7 @@ CREATE TABLE invoices (
     FOREIGN KEY (guardian_id) REFERENCES guardians(id)
 );
 
--- 8. Seed Data: Populate the 6 Color-Coded Rooms
+--6 classrooms split by age 
 -- Based on the 3 month to 3 year age split
 INSERT INTO classrooms (room_name, age_range, capacity) VALUES 
 ('Red Room', '3-12 Months', 4),
