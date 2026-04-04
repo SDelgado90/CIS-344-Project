@@ -14,7 +14,7 @@ Database Configuration:
 2. Create a new database named `childcare_db`.
 3. Go to the Import tab and select the `database.sql` file in the repository.
 
-    Application Setup:
+Application Setup:
 1. Copy the repository into your `htdocs` folder.
 2. Open `includes/db_connect.php` and verify the database credentials (default is `root` with no password).
 
