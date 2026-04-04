@@ -1,15 +1,15 @@
 Childcare Center Management System
 CIS 344 - Group Project
-**Group Members:** Sasha Delgado & Rasel Ali
 
-## Overview
-This application is structured manage a daycare center for children aged 3 months to 3 years. It automates room assignments based on age, tracks attendance using relational joins, and processes billing via secure SQL transactions.
+Group Members:Sasha Delgado & Rasel Ali
 
-## Installation & Setup Instructions
+Overview: This application is structured manage a daycare center for children aged 3 months to 3 years. It automates room assignments based on age, tracks attendance using relational joins, and processes billing via secure SQL transactions.
+
+Installation & Setup Instructions;
 To run this application locally, follow these steps:
 
-1. **Prerequisites:** - Install [XAMPP] (or any WAMP/MAMP stack) to run Apache and MySQL.
-2. **Database Configuration:**
+Prerequisites: Install [XAMPP] (or any WAMP/MAMP stack) to run Apache and MySQL.
+Database Configuration:
    - Open **phpMyAdmin**.
    - Create a new database named `childcare_db`.
    - Go to the **Import** tab and select the `database.sql` file in the repository.
