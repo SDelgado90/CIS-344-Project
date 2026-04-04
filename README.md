@@ -8,7 +8,7 @@ This application is structured manage a daycare center for children aged 3 month
 ## Installation & Setup Instructions
 To run this application locally, follow these steps:
 
-1. **Prerequisites:** - Install [XAMPP](https://www.apachefriends.org/) (or any WAMP/MAMP stack) to run Apache and MySQL.
+1. **Prerequisites:** - Install [XAMPP] (or any WAMP/MAMP stack) to run Apache and MySQL.
 2. **Database Configuration:**
    - Open **phpMyAdmin**.
    - Create a new database named `childcare_db`.
