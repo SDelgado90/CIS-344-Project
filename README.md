@@ -10,14 +10,16 @@ To run this application locally, follow these steps:
 
 Prerequisites: Install [XAMPP] (or any WAMP/MAMP stack) to run Apache and MySQL.
 Database Configuration:
-   - Open phpMyAdmin.
-   - Create a new database named `childcare_db`.
-   - Go to the Import tab and select the `database.sql` file in the repository.
-     Application Setup:
-   - Copy the repository into your `htdocs` folder.
-   - Open `includes/db_connect.php` and verify the database credentials (default is `root` with no password).
-     Accessing the App:
-   - Copy in your browser the following link `http://localhost/CIS-344-Project/index.php`.
+1. Open phpMyAdmin.
+2. Create a new database named `childcare_db`.
+3. Go to the Import tab and select the `database.sql` file in the repository.
+
+    Application Setup:
+1. Copy the repository into your `htdocs` folder.
+2. Open `includes/db_connect.php` and verify the database credentials (default is `root` with no password).
+
+Accessing the App:
+1. Copy in your browser the following link `http://localhost/CIS-344-Project/index.php`.
 
  Core Features
 - Security: Implemented PDO Prepared Statements in `enrollment.php` to prevent SQL Injection.
