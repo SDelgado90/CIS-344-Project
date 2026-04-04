@@ -19,7 +19,7 @@ Application Setup:
 2. Open `includes/db_connect.php` and verify the database credentials (default is `root` with no password).
 
 Accessing the App:
-1. Copy in your browser the following link `http://localhost/CIS-344-Project/index.php`.
+Copy and paste the link in your browser;  `http://localhost/CIS-344-Project/index.php`.
 
  Core Features
 - Security: Implemented PDO Prepared Statements in `enrollment.php` to prevent SQL Injection.
