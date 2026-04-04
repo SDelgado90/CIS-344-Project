@@ -1,5 +1,5 @@
-# Childcare Center Management System
-**CIS 344 - Group Project**
+Childcare Center Management System
+CIS 344 - Group Project
 **Group Members:** Sasha Delgado & Rasel Ali
 
 ## Overview
